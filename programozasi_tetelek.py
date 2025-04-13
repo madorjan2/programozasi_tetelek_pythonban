@@ -1,5 +1,5 @@
 # Programozási tételek
-# By madorjan, 01/12/20023
+# By madorjan, 01/12/2023
 # Pszeudokód forrása: https://szit.hu/doku.php?id=oktatas:programozas:programozasi_tetelek:mondatszeru_leiras
 
 # Összegzés
