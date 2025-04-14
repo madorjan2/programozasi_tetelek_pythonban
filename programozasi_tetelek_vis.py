@@ -1,8 +1,9 @@
 # Programozási tételek vizualizalasa
 # By madorjan, 01/12/20023
 
+
 def print_line_sep():
-	print('='*40)
+	print('=' * 40)
 
 
 def list_visualizer(t, i):
@@ -10,8 +11,8 @@ def list_visualizer(t, i):
 	print(f'Lista: {t}')
 	pos = 8
 	for k in range(0, i):
-		pos += len(str(t[k])) + 2 + isinstance(t[k], str)*2
-	print(pos*' ' + '↑')
+		pos += len(str(t[k])) + 2 + isinstance(t[k], str) * 2
+	print(pos * ' ' + '↑')
 
 
 def osszegzes(t):
@@ -30,7 +31,7 @@ def osszegzes(t):
 		print(f'Összeg: {osszeg}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A listában szereplő elemek összege: {osszeg}')
 	return osszeg
 
@@ -41,7 +42,7 @@ def megszamolas(t):
 	print()
 	print('Bemeneti adatok:')
 	print(f't lista: {t}')
-	print(f'Feltétel: negatív szám')
+	print('Feltétel: negatív szám')
 	input()
 	szamlalo = 0
 	for i in range(len(t)):
@@ -53,7 +54,7 @@ def megszamolas(t):
 		print(f'Számláló: {szamlalo}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A feltételnek {szamlalo} elem felelt meg.')
 	return szamlalo
 
@@ -76,11 +77,11 @@ def eldontes_naiv(t, keresett_ertek):
 		print(f'Megtaláltuk már a listában a keresett értéket? {van}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	if van:
-		print(f'A listában megtaláltuk a keresett értéket.')
+		print('A listában megtaláltuk a keresett értéket.')
 	else:
-		print(f'A listában nem találtuk meg a keresett értéket.')
+		print('A listában nem találtuk meg a keresett értéket.')
 	return van
 
 
@@ -95,7 +96,7 @@ def eldontes(t, keresett_ertek):
 	i = 0
 	print(f'{i + 1}. iteráció')
 	list_visualizer(t, i)
-	print(f'A lista végén állunk? {not(i < len(t))}')
+	print(f'A lista végén állunk? {not (i < len(t))}')
 	print(f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}')
 	print(f'Kiléphetünk? {not (i < len(t) and t[i] != keresett_ertek)}')
 	print_line_sep()
@@ -104,21 +105,27 @@ def eldontes(t, keresett_ertek):
 		i = i + 1
 		print(f'{i + 1}. iteráció')
 		list_visualizer(t, i)
-		print(f'A lista végén állunk? {not(i < len(t))}')
+		print(f'A lista végén állunk? {not (i < len(t))}')
 		if i < len(t):
-			print(f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}')
-			print(f'Kiléphetünk? {not (i < len(t) and t[i] != keresett_ertek)}')
+			print(
+				f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}'
+			)
+			print(
+				f'Kiléphetünk? {not (i < len(t) and t[i] != keresett_ertek)}'
+			)
 		else:
-			print(f'Megtaláltuk a keresett értéket? Az index túlmutat a lista utolsó elemén.')
-			print(f'Kiléphetünk? True')
+			print(
+				'Megtaláltuk a keresett értéket? Az index túlmutat a lista utolsó elemén.'
+			)
+			print('Kiléphetünk? True')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	if i < len(t):
-		print(f'A listában megtaláltuk a keresett értéket.')
+		print('A listában megtaláltuk a keresett értéket.')
 		return True
 	else:
-		print(f'A listában nem találtuk meg a keresett értéket.')
+		print('A listában nem találtuk meg a keresett értéket.')
 		return False
 
 
@@ -141,11 +148,13 @@ def kivalasztas(t, keresett_ertek):
 		i = i + 1
 		print(f'{i + 1}. iteráció')
 		list_visualizer(t, i)
-		print(f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}')
+		print(
+			f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}'
+		)
 		print(f'Kiléphetünk? {not (i < len(t) and t[i] != keresett_ertek)}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A listában a keresett elem indexe: {i}.')
 	return i
 
@@ -172,18 +181,24 @@ def kereses(t, keresett_ertek):
 		list_visualizer(t, i)
 		print(f'A lista végén állunk? {not (i < len(t))}')
 		if i < len(t):
-			print(f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}')
-			print(f'Kiléphetünk? {not (i < len(t) and t[i] != keresett_ertek)}')
+			print(
+				f'Megtaláltuk a keresett értéket? {not (t[i] != keresett_ertek)}'
+			)
+			print(
+				f'Kiléphetünk? {not (i < len(t) and t[i] != keresett_ertek)}'
+			)
 		else:
-			print(f'Megtaláltuk a keresett értéket? Az index túlmutat a lista utolsó elemén.')
-			print(f'Kiléphetünk? True')
+			print(
+				'Megtaláltuk a keresett értéket? Az index túlmutat a lista utolsó elemén.'
+			)
+			print('Kiléphetünk? True')
 		print_line_sep()
 		input()
 	if i < len(t):
 		print(f'A listában megtaláltuk a keresett értéket, az indexe: {i}.')
 		return True, i
 	else:
-		print(f'A listában nem találtuk meg a keresett értéket.')
+		print('A listában nem találtuk meg a keresett értéket.')
 		return False, -1
 
 
@@ -193,7 +208,7 @@ def masolas(t):
 	print()
 	print('Bemeneti adatok:')
 	print(f't lista: {t}')
-	print(f'Művelet: négyzetre emelés')
+	print('Művelet: négyzetre emelés')
 	input()
 	ki = []
 	for i in range(len(t)):
@@ -204,7 +219,7 @@ def masolas(t):
 		print(f'Kimeneti lista: {ki}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A kimeneti listánk: {ki}')
 	return ki
 
@@ -215,7 +230,7 @@ def kivalogatas(t):
 	print()
 	print('Bemeneti adatok:')
 	print(f't lista: {t}')
-	print(f'Feltétel: negatív szám')
+	print('Feltétel: negatív szám')
 	input()
 	ki = []
 	for i in range(len(t)):
@@ -227,7 +242,7 @@ def kivalogatas(t):
 		print(f'Kimeneti lista: {ki}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A kimeneti listánk: {ki}')
 	return ki
 
@@ -238,7 +253,7 @@ def szetvalogatas(t):
 	print()
 	print('Bemeneti adatok:')
 	print(f't lista: {t}')
-	print(f'Feltétel: negatív szám')
+	print('Feltétel: negatív szám')
 	input()
 	ki1 = []
 	ki2 = []
@@ -254,7 +269,7 @@ def szetvalogatas(t):
 		print(f'Nemnegatív számok listája: {ki2}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'Negatív számok listája: {ki1}')
 	print(f'Nemnegatív számok listája: {ki2}')
 	return ki1, ki2
@@ -278,7 +293,7 @@ def metszet(a, b):
 		print(f'Metszet lista: {ki}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A kimenet listája: {ki}')
 	return ki
 
@@ -304,11 +319,13 @@ def unio(a, b):
 			ki.append(a[i])
 		print(f'{i + 1}. iteráció')
 		list_visualizer(a, i)
-		print(f'A(z) {a[i]} szerepel a {old_ki} kimeneti listában? {a[i] in old_ki}')
+		print(
+			f'A(z) {a[i]} szerepel a {old_ki} kimeneti listában? {a[i] in old_ki}'
+		)
 		print(f'Unió lista: {ki}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A kimenet listája: {ki}')
 	return ki
 
@@ -321,9 +338,11 @@ def maximum(t):
 	print(f't lista: {t}')
 	input()
 	max_ertek = t[0]
-	print(f'1. iteráció')
+	print('1. iteráció')
 	list_visualizer(t, 0)
-	print(f'Mivel még nincs maximum értékünk, legyen a jelenlegi elem a maximum.')
+	print(
+		'Mivel még nincs maximum értékünk, legyen a jelenlegi elem a maximum.'
+	)
 	print(f'Maximum: {max_ertek}')
 	print_line_sep()
 	input()
@@ -333,11 +352,13 @@ def maximum(t):
 			max_ertek = t[i]
 		print(f'{i + 1}. iteráció')
 		list_visualizer(t, i)
-		print(f'Nagyobb a jelenlegi érték a maximumnál: {t[i]} > {old_max} = {t[i] > old_max}')
+		print(
+			f'Nagyobb a jelenlegi érték a maximumnál: {t[i]} > {old_max} = {t[i] > old_max}'
+		)
 		print(f'Maximum: {max_ertek}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A lista legnagyobb eleme: {max_ertek}')
 	return max_ertek
 
@@ -350,9 +371,11 @@ def minimum(t):
 	print(f't lista: {t}')
 	input()
 	min_ertek = t[0]
-	print(f'1. iteráció')
+	print('1. iteráció')
 	list_visualizer(t, 0)
-	print(f'Mivel még nincs minimum értékünk, legyen a jelenlegi elem a minimum.')
+	print(
+		'Mivel még nincs minimum értékünk, legyen a jelenlegi elem a minimum.'
+	)
 	print(f'Minimum: {min_ertek}')
 	print_line_sep()
 	input()
@@ -362,18 +385,22 @@ def minimum(t):
 			min_ertek = t[i]
 		print(f'{i + 1}. iteráció')
 		list_visualizer(t, i)
-		print(f'Kisebb a jelenlegi érték a minimumnál: {t[i]} < {old_min} = {t[i] < old_min}')
+		print(
+			f'Kisebb a jelenlegi érték a minimumnál: {t[i]} < {old_min} = {t[i] < old_min}'
+		)
 		print(f'Minimum: {min_ertek}')
 		print_line_sep()
 		input()
-	print(f'Az algoritmus végére értünk.')
+	print('Az algoritmus végére értünk.')
 	print(f'A lista legkisebb eleme: {min_ertek}')
 	return min_ertek
 
 
 print()
 print('Üdv!')
-print('Ha még nem tetted, szedd ki a kommentet a program végén található valamely függvényhívás elől.')
+print(
+	'Ha még nem tetted, szedd ki a kommentet a program végén található valamely függvényhívás elől.'
+)
 print('Az algoritmusban az Enter billentyű segítségével léphetsz előre.')
 print()
 print_line_sep()

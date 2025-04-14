@@ -13,11 +13,13 @@
 # ciklus vége
 # ki osszeg
 
+
 def osszegzes(t):
 	osszeg = 0
 	for i in range(len(t)):
 		osszeg = osszeg + t[i]
 	return osszeg
+
 
 # Megszámolás
 # Adott egy t lista és egy f feltétel, kimenetként várjuk, a listánkban hány elem felet meg f feltételnek
@@ -31,6 +33,7 @@ def osszegzes(t):
 #     ha vége
 # ciklus vége
 # ki szamlalo
+
 
 def megszamolas(t, feltetel):
 	szamlalo = 0
@@ -54,12 +57,14 @@ def megszamolas(t, feltetel):
 # ciklus vége
 # ki van
 
+
 def eldontes_naiv(t, keresett_ertek):
 	van = False
 	for i in range(len(t)):
 		if t[i] == keresett_ertek:
 			van = True
 	return van
+
 
 # Optimalizált algoritmus - azonnal megáll, ha megtaláltuk a keresett értéket:
 # i = 0
@@ -72,6 +77,7 @@ def eldontes_naiv(t, keresett_ertek):
 #     ki "A keresett érték nem található"
 # ha vége
 
+
 def eldontes(t, keresett_ertek):
 	i = 0
 	while i < len(t) and t[i] != keresett_ertek:
@@ -80,6 +86,7 @@ def eldontes(t, keresett_ertek):
 		return True
 	else:
 		return False
+
 
 # Kiválasztás
 # Adott egy t lista, valamint egy, a listában biztosan szereplő keresett_ertek, kimenetként szeretnénk tudni a
@@ -92,11 +99,13 @@ def eldontes(t, keresett_ertek):
 # ciklus vége
 # ki i
 
+
 def kivalasztas(t, keresett_ertek):
 	i = 0
 	while t[i] != keresett_ertek:
 		i = i + 1
 	return i
+
 
 # Keresés
 # Adott egy t lista, valamint egy keresett_ertek változó. Kimenetként várunk egy boolean értéket, hogy a változó
@@ -116,6 +125,7 @@ def kivalasztas(t, keresett_ertek):
 #     ki: "A keresett érték nem található"
 # ha vége
 
+
 def kereses(t, keresett_ertek):
 	i = 0
 	while i < len(t) and t[i] != keresett_ertek:
@@ -125,6 +135,7 @@ def kereses(t, keresett_ertek):
 	else:
 		return False, -1
 
+
 # Másolás
 # Adott egy t lista, valamint egy művelet. Kimenetként várunk egy listát, amin a t elemein végrehajtunk egy műveletet.
 # python shorthand: ki = [muvelet(x) for x in t]
@@ -133,11 +144,13 @@ def kereses(t, keresett_ertek):
 #     b[i] = művelet(a[i]) //valamilyen művelet a[i]-vel
 # ciklus vége
 
+
 def masolas(t, muvelet):
 	ki = []
 	for i in range(len(t)):
 		ki.append(muvelet(t[i]))
 	return ki
+
 
 # Kiválogatás
 # Adott egy t lista, valamint egy f feltétel. Kimenetként várunk egy listát, ami t azon elemeit tartalmazza, ami megfelel
@@ -154,12 +167,14 @@ def masolas(t, muvelet):
 #     ha vége
 # ciklus vége
 
+
 def kivalogatas(t, feltetel):
 	ki = []
 	for i in range(len(t)):
 		if feltetel(t[i]):
 			ki.append(t[i])
 	return ki
+
 
 # Szétválogatás
 # Adott egy t lista, valamint egy f feltétel. Kimenetként várunk két listát, az egyikben t f feltételnek megfelelő elemeit,
@@ -180,6 +195,7 @@ def kivalogatas(t, feltetel):
 #     ha vége
 # ciklus vége
 
+
 def szetvalogatas(t, feltetel):
 	ki1 = []
 	ki2 = []
@@ -189,6 +205,7 @@ def szetvalogatas(t, feltetel):
 		else:
 			ki2.append(t[i])
 	return ki1, ki2
+
 
 # Metszet
 # Adott a és b lista. Kimenetként várunk egy listát a és b közös elemeivel.
@@ -206,12 +223,14 @@ def szetvalogatas(t, feltetel):
 #     ha vége
 # ciklus vége
 
+
 def metszet(a, b):
 	ki = []
 	for i in range(len(a)):
 		if a[i] in b:
 			ki.append(a[i])
 	return ki
+
 
 # Unió
 # Adott a és b lista. Kimenetként várunk egy listát, amelyben a és b minden eleme szerepel pontosan egyszer.
@@ -232,12 +251,14 @@ def metszet(a, b):
 #     ha vége
 # ciklus vége
 
+
 def unio(a, b):
 	ki = a
 	for i in range(len(b)):
 		if b[i] not in ki:
 			ki.append(b[i])
 	return ki
+
 
 # Maximum kiválasztás
 # Adott t, rendezhető elemekből álló lista. Kimenetként várjuk a lista legnagyobb értékű elemét.
@@ -251,12 +272,14 @@ def unio(a, b):
 # ciklus vége
 # ki max
 
+
 def maximum(t):
 	max_ertek = t[0]
 	for i in range(1, len(t)):
 		if max_ertek < t[i]:
 			max_ertek = t[i]
 	return max_ertek
+
 
 # Minimum kiválasztás
 # Adott t, rendezhető elemekből álló lista. Kimenetként várjuk a lista legkisebb értékű elemét.
@@ -269,6 +292,7 @@ def maximum(t):
 #     ha vége
 # ciklus vége
 # ki min
+
 
 def minimum(t):
 	min_ertek = t[0]
